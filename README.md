@@ -6,7 +6,8 @@ This project is a 2D platformer coded from scratch in Python using the PyGame li
 
 ## Preview
 
-<img src="" style="width:600px;">
+<img src="screenshot.png" style="width:800px;">
+<a href="https://www.youtube.com/watch?v=bYbD1c4v_ko" target="_blank">Video Showcase</a>
 
 ## Features
 
