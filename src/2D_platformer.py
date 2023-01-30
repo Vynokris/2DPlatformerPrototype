@@ -196,7 +196,7 @@ class enemy_class(pygame.sprite.Sprite):
         pygame.sprite.Sprite.__init__(self, enemy_group, not_player_group, all_group)
         self.image = pygame.image.load("enemy.png").convert_alpha()
         self.rect = self.image.get_rect()
-        self.rect.x = 0
+        self.rect.x = screen_w // 2
         self.rect.y = screen_h // 2 + 100
         self.mask = pygame.mask.from_surface(self.image)
         self.velocity = 2.2
@@ -356,9 +356,12 @@ while running:
             if event.key == pygame.K_LSHIFT:
                 if not player.dashing and player.dash_count < 1:
                     player.dashing = True
+            #Input to quit
+            if event.key == pygame.K_ESCAPE:
+                running = False
 
         #To quit
         if event.type == pygame.QUIT:
-            quit()
+            running = False
 
     pygame.display.update()
